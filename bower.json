@@ -1,0 +1,22 @@
+{
+  "name": "book-library-webpack",
+  "version": "0.0.0",
+  "homepage": "https://github.com/Antontelesh/book-library-webpack",
+  "authors": [
+    "Anton Telesh <a.telesh@smcs.com.ua>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.3.8",
+    "angular-route": "~1.3.8",
+    "lodash": "~2.4.1"
+  }
+}

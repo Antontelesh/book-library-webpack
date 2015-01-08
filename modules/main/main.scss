@@ -1,0 +1,90 @@
+@import "../../bower_components/bourbon/dist/_bourbon";
+@import "../../bower_components/neat/app/assets/stylesheets/_neat";
+@import "../menu/menu";
+
+$color-red: #dd0000;
+
+%unstyled-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+%list-header {
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+%list-item {
+  margin-bottom: 10px;
+}
+
+html, body {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.container {
+  @include outer-container;
+}
+
+article {
+  @include span-columns(9);
+}
+
+aside {
+  @include span-columns(3);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  margin-bottom: 20px;
+  font-weight: normal;
+}
+
+p {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  @include row();
+}
+
+input,
+textarea {
+  padding: 5px;
+  border: 1px solid #ddd;
+  width: 200px;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.control-group {
+  @include row();
+  margin-bottom: 20px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.required-mark {
+  color: $color-red;
+}
+
+.ng-submitted {
+  .ng-invalid:not(:focus) {
+    border-color: $color-red;
+  }
+}

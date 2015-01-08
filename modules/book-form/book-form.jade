@@ -1,0 +1,44 @@
+extends ../main/main.jade
+
+block main
+  form#book-form(
+    name="book_form")
+
+    h1(ng-if="::book.id") {{ book.title || 'Редактирование книги' }}
+    h1(ng-if="::!book.id") Новая книга
+
+
+    .control-group
+      .title-container
+        label(for="title")
+          | Название
+          span.required-mark *
+        input.full-width(
+          name="title",
+          input-required,
+          ng-model="book.title")
+
+    .control-group
+      .author-container
+        label(for="author")
+          | Автор
+          span.required-mark *
+        input.full-width(
+          name="author",
+          input-required,
+          ng-model="book.author")
+
+    .control-group
+      .genre-container
+        label(for="genre") Жанр
+        input(
+          name="genre",
+          ng-model="book.genre")
+
+    .control-group
+      label(for="description") Описание
+      textarea.full-width(
+        name="description",
+        ng-model="book.description")
+
+    button(ng-click="save()") Сохранить

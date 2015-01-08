@@ -1,0 +1,17 @@
+extends ../main/main.jade
+
+block main
+  #authors
+    .authors-container(ng-if="::authors.length")
+      ul.authors-header
+        li.name Имя
+        li.books Количество книг
+
+      ul.authors
+        li.authors__author(ng-repeat="author in ::authors")
+          ul.author-data
+            li.name
+              a(ng-href="#/books?author={{::author.name}}") {{::author.name}}
+            li.books {{::author.books.length}}
+
+    p(ng-if="::!authors.length") Ни одного автора ещё нет

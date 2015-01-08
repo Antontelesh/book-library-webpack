@@ -1,0 +1,31 @@
+@import "../main/main";
+
+.books {
+  @extend %unstyled-list;
+}
+
+.books-header,
+.book-data {
+  @extend %unstyled-list;
+  @include row();
+
+  .title {
+    @include span-columns(6);
+  }
+
+  .author {
+    @include span-columns(3);
+  }
+
+  .genre {
+    @include span-columns(3);
+  }
+}
+
+.books-header {
+  @extend %list-header;
+}
+
+.books__book {
+  @extend %list-item;
+}

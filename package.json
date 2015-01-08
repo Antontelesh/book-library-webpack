@@ -1,0 +1,40 @@
+{
+  "name": "book-library-webpack",
+  "version": "0.0.0",
+  "description": "Learning Webpack with test project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Antontelesh/book-library-webpack.git"
+  },
+  "author": "Anton Telesh <a.telesh@smcs.com.ua>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Antontelesh/book-library-webpack/issues"
+  },
+  "homepage": "https://github.com/Antontelesh/book-library-webpack",
+  "devDependencies": {
+    "coffee-loader": "^0.7.2",
+    "coffee-script": "^1.8.0",
+    "css-loader": "^0.9.0",
+    "exports-loader": "^0.6.2",
+    "expose-loader": "^0.6.0",
+    "file-loader": "^0.8.1",
+    "imports-loader": "^0.6.3",
+    "jade": "^1.8.2",
+    "jade-loader": "^0.7.0",
+    "path": "^0.4.9",
+    "sass-loader": "^0.3.1",
+    "script-loader": "^0.6.1",
+    "style-loader": "^0.8.2",
+    "webpack": "^1.4.14"
+  },
+  "dependencies": {
+    "connect": "^3.3.3",
+    "oclazyload": "^0.5.1",
+    "serve-static": "^1.7.1"
+  }
+}
