@@ -4,18 +4,20 @@ block main
   #books
     .books-container(ng-if="books.length")
       ul.books-header
-        li.title Название
-        li.author Автор
-        li.genre Жанр
+        li.title(ng-bind="::lang.books.book_title")
+        li.author(ng-bind="::lang.books.author")
+        li.genre(ng-bind="::lang.books.genre")
 
       ul.books
         li.books__book(ng-repeat="book in books | filter:filters | orderBy:order")
           ul.book-data
             li.title
-              a(ng-href="#/books/{{book.id}}") {{book.title}}
+              a(ng-href="#/books/{{book.id}}") {{::book.title}}
             li.author
-              a(ng-href="#/books?author={{book.author}}") {{book.author}}
+              a(ng-href="#/books?author={{book.author}}") {{::book.author}}
             li.genre
-              a(ng-href="#/books?genre={{book.genre}}") {{book.genre}}
+              a(ng-href="#/books?genre={{book.genre}}") {{::book.genre}}
 
-    p(ng-if="!books.length") Ни одной книги ещё нет
+    p(
+      ng-if="!books.length",
+      ng-bind="::lang.books.empty")

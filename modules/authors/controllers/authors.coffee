@@ -8,16 +8,20 @@ Author = (books, name) ->
 getAuthors = _.compose(mapWith(Author), groupBy('author'))
 
 ###*
- * @ngdoc type
- * @name BookLibrary.Controllers.AuthorsCtrl
+ * @ngdoc controller
+ * @name BookLibrary.Authors.AuthorsCtrl
+ * @module  BookLibrary.Authors
+ *
+ * @description
+ * Формирует массив авторов для отображения в шаблоне
  *
  * @property {array} authors Массив авторов в формате
  * ```
  * <pre>
- * {
- *   name: {string},
- *   books: {array}
- * }
+ *   {
+ *     name: {string},
+ *     books: {array}
+ *   }
  * </pre>
  * ```
 ###

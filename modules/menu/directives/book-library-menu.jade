@@ -2,7 +2,9 @@ ul.main-menu
   li.main-menu__item(
     ng-repeat="section in ::menu.sections",
     ng-class="::{'current': section.current}")
-    a(ng-href="\#{{::section.path}}") {{:: section.name }}
+    a(
+      ng-href="\#{{::section.path}}",
+      ng-bind="::lang.menu.sections[section.name]")
     a(
       ng-if="::section.path == '/books'",
       href="#/books/create") +

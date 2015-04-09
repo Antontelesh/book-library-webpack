@@ -4,14 +4,17 @@ block main
   #authors
     .authors-container(ng-if="::authors.length")
       ul.authors-header
-        li.name Имя
-        li.books Количество книг
+        li.name(ng-bind="::lang.authors.author")
+        li.books(ng-bind="::lang.authors.books_quantity")
 
       ul.authors
         li.authors__author(ng-repeat="author in ::authors")
           ul.author-data
             li.name
-              a(ng-href="#/books?author={{::author.name}}") {{::author.name}}
-            li.books {{::author.books.length}}
+              a(ng-href="#/books?author={{::author.name}}")
+                span(ng-bind="::author.name")
+            li.books(ng-bind="::author.books.length")
 
-    p(ng-if="::!authors.length") Ни одного автора ещё нет
+    p(
+      ng-if="::!authors.length",
+      ng-bind="::lang.authors.empty")

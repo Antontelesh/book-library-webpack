@@ -4,10 +4,10 @@ module.exports = [
     class MenuSections
 
       section_names:
-        '/books': 'Книги'
-        '/authors': 'Авторы'
-        '/genres': 'Жанры'
-        # '/tags': 'Метки'
+        '/books': 'books'
+        '/authors': 'authors'
+        # '/genres': 'genres'
+        # '/tags': 'tags'
 
       constructor: ->
 

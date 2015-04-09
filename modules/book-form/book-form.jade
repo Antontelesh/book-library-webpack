@@ -4,14 +4,18 @@ block main
   form#book-form(
     name="book_form")
 
-    h1(ng-if="::book.id") {{ book.title || 'Редактирование книги' }}
-    h1(ng-if="::!book.id") Новая книга
+    h1(
+      ng-if="::book.id",
+      ng-bind="book.title || lang.book_form.title_edit")
+    h1(
+      ng-if="::!book.id",
+      ng-bind="::lang.book_form.title_new")
 
 
     .control-group
       .title-container
         label(for="title")
-          | Название
+          span(ng-bind="::lang.book_form.book_title")
           span.required-mark *
         input.full-width(
           name="title",
@@ -21,7 +25,7 @@ block main
     .control-group
       .author-container
         label(for="author")
-          | Автор
+          span(ng-bind="::lang.book_form.author")
           span.required-mark *
         input.full-width(
           name="author",
@@ -30,15 +34,21 @@ block main
 
     .control-group
       .genre-container
-        label(for="genre") Жанр
+        label(
+          for="genre",
+          ng-bind="::lang.book_form.genre")
         input(
           name="genre",
           ng-model="book.genre")
 
     .control-group
-      label(for="description") Описание
+      label(
+        for="description",
+        ng-bind="::lang.book_form.description")
       textarea.full-width(
         name="description",
         ng-model="book.description")
 
-    button(ng-click="save()") Сохранить
+    button(
+      ng-click="save()",
+      ng-bind="::lang.book_form.save")
