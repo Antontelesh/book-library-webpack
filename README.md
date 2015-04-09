@@ -6,7 +6,7 @@ Learning Webpack with test project
 
 ## Running
 
-1. Before installing ensure you have installed npm, bower and webpack globally.
+1. Before installing ensure you have installed npm, bower, webpack and http-server globally.
 2. Clone the repo and run
   ```
   $ npm start
